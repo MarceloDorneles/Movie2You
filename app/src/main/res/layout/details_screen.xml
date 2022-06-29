@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="24dp"
+    android:layout_marginTop="-24dp"
+    android:layout_marginBottom="-24dp"
+    android:background="@drawable/background"
+    app:cardBackgroundColor="#00FFFFFF">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="408dp"
+            android:layout_height="755dp"
+            android:background="@drawable/background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.333"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/header_back_poster"
+            android:layout_width="match_parent"
+            android:layout_height="444dp"
+            android:alpha=".34"
+            android:outlineProvider="background"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="@+id/imageView"
+            tools:layout_editor_absoluteX="0dp"
+            tools:src="@drawable/sample_back_poster" />
+
+        <ImageView
+            android:id="@+id/header_back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="44dp"
+            android:paddingBottom="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_right_arrow" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/header_poster_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/header_title"
+            android:layout_width="195dp"
+            android:layout_height="22dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/header_poster"
+            app:layout_constraintTop_toTopOf="@+id/header_poster"
+            tools:ignore="MissingConstraints"
+            tools:text="Batman" />
+
+        <TextView
+            android:id="@+id/header_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="#DEDDDF"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/header_poster_card"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@id/header_title"
+            app:layout_constraintTop_toBottomOf="@id/header_title"
+            tools:text="1 hora(s) e 30 minuto(s)" />
+
+        <TextView
+            android:id="@+id/header_genres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#DEDDDF"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/header_poster_card"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@id/header_title"
+            app:layout_constraintTop_toBottomOf="@id/header_time"
+            tools:text="Action • Super Hero" />
+
+        <ImageView
+            android:id="@+id/header_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/header_title"
+            app:layout_constraintTop_toBottomOf="@id/header_genres"
+            app:srcCompat="@drawable/ic_star" />
+
+        <TextView
+            android:id="@+id/header_votes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:textColor="#9C9B9B"
+            app:layout_constraintStart_toEndOf="@+id/header_star"
+            app:layout_constraintTop_toBottomOf="@+id/header_genres"
+            tools:text="8.9 / 10 Média de Votos" />
+
+        <ImageView
+            android:id="@+id/header_poster"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/header_back_poster"
+            app:layout_constraintEnd_toEndOf="@+id/header_back_poster"
+            tools:srcCompat="@drawable/sample_poster" />
+
+        <TextView
+            android:id="@+id/Title_Sinopse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:text="Sinopse"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/header_back_poster" />
+
+        <TextView
+            android:id="@+id/OverviewBatman"
+            android:layout_width="348dp"
+            android:layout_height="84dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:text="TextView"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/Title_Sinopse" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
